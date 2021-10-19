@@ -1,0 +1,71 @@
+:root {
+    /* Colors */
+    --colorBackground: #FBFCFE;
+    --colorBluePrimary: #07167C;
+    --colorBlueSecondary: #F3F4FA;
+    --colorBlueBorder: #5666F2;
+    --colorBlueShadow: #0524C8;     /* TODO: add alpha 0.05 */
+    --colorTextPrimary: #2E313E;
+    --colorBlackAccent: #4B4B5A;
+    --colorGrey04: #7D7D7E;
+}
+
+@font-face {
+    font-family: nunitoRegFont;
+    src: url(fonts/Nunito-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: nunitoSemiBoldFont;
+    src: url(fonts/Nunito-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: nunitoBoldFont;
+    src: url(fonts/Nunito-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: nunitoSansRegFont;
+    src: url(fonts/NunitoSans-Regular.ttf);
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--colorBackground);
+    min-width: 1032px;
+}
+
+.header {
+    color: var(--colorBluePrimary);
+    height: 72px;
+    display: flex;
+}
+
+.header > div {
+    font-family: nunitoSemiBoldFont;
+    align-content: space-between;
+    font-size: 16px;
+}
+
+#headerLeft {
+    width: 200;
+    
+}
+
+
+
+#headerRight {
+    width: 170;
+}
+
+footer {
+    height: 88px;
+}
+
+#register-button {
+    border-radius: 40px;
+}
