@@ -2,30 +2,59 @@
 
 <html>
     <head>
-        <title>
-            Landing page
-        </title>
-        <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+        <title>Landing page</title>
+        <link href="../css/styles.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <header class="header">
-            
+        
+       <header>
             <div id="headerLeft">
-                <div>Homepage</div>
-                <div>Find a job</div>
+                <a href="http://google.com" class="buttonTransparent">
+                    <h4>Homepage</h4>
+                </a>
+                <a href="http://google.com" class="buttonTransparent">
+                    <h4>Find a job</h4>
+                </a>
             </div>
-            <div>
-                <img src="assets/images/ISIA-logo.jpg" alt="ISIA logo image" width="64" height="48">
+            <div id="headerCenter">
+                <img src="../assets/images/isia-logo.png" alt="header ISIA logo">
             </div>
-            <div id="headerRight">
-                <div>Log in</div>
-                <div>Register</div>
+            <div id="headerRight" class="headerRight">
+                <a href="" class="buttonTransparent">
+                    <h4>Log in</h4>
+                </a>
+                <a href="http://google.com">
+                    <div class="buttonRegisterSmall">
+                        <p>Register</p>
+                    </div>
+                </a>
             </div>
+       </header>
 
-        </header>
+       <main></main>
 
-        <footer>
+       <footer>
+            <div class="footerLeft">
+                <h5>Find us here:</h5>
+                <div>
+                    <a href="">
+                        <img src="../assets/icons/social_networks/twitter.png" alt="follow twitter" width="32" height="32">
+                    </a>
+                    <a href="">
+                        <img src="../assets/icons/social_networks/linkedin.png" alt="follow linkedin" width="32" height="32">
+                    </a>
+                    <a href="">
+                        <img src="../assets/icons/social_networks/facebook.png" alt="follow facebook" width="32" height="32">
+                    </a>
+                </div>
+            </div>
+            <div class="footerRight">
+                <h5>Language</h5>
+                <button class="languageButton">
 
-        </footer>
+                </button>
+            </div>
+       </footer>
+
     </body>
 </html>

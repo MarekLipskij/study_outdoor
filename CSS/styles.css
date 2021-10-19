@@ -12,60 +12,180 @@
 
 @font-face {
     font-family: nunitoRegFont;
-    src: url(fonts/Nunito-Regular.ttf);
+    src: url(../fonts/Nunito-Regular.ttf);
     font-weight: 400;
 }
 
 @font-face {
     font-family: nunitoSemiBoldFont;
-    src: url(fonts/Nunito-SemiBold.ttf);
+    src: url(../fonts/Nunito-SemiBold.ttf);
     font-weight: 600;
 }
 
 @font-face {
     font-family: nunitoBoldFont;
-    src: url(fonts/Nunito-Bold.ttf);
+    src: url(../fonts/Nunito-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
     font-family: nunitoSansRegFont;
-    src: url(fonts/NunitoSans-Regular.ttf);
+    src: url(../fonts/NunitoSans-Regular.ttf);
     font-weight: 400;
 }
 
-body {
-    background-color: var(--colorBackground);
-    min-width: 1032px;
+h1 {
+    font-family: nunitoBoldFont;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--colorBlackAccent);
 }
 
-.header {
+h2 {
+    font-family: nunitoBoldFont;
+    font-size: 24px;
+    line-height: 1.33;
     color: var(--colorBluePrimary);
-    height: 72px;
-    display: flex;
 }
 
-.header > div {
-    font-family: nunitoSemiBoldFont;
-    align-content: space-between;
+h3 {
+    font-family: nunitoBoldFont;
     font-size: 16px;
+    line-height: 1.5;
+    color: var(--colorBluePrimary);
+}
+
+h4 {
+    font-family: nunitoSemiBoldFont;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--colorBluePrimary);
+}
+
+h5 {
+    font-family: nunitoRegFont;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--colorBlackAccent);
+}
+
+a {
+    text-decoration: none;
+    align-self: center;
+}
+
+a img {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* NOTE: page main components */
+body {
+    background-color: grey; /* TODO switch for -> var(--colorBackground); */
+    margin: 0px;
+    padding: 0px;
+    max-width: 1000px;
+}
+
+header {
+    background-color: var(--colorBackground);
+    height: 72px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header > div {
+    height: max-content;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
 }
 
 #headerLeft {
-    width: 200;
-    
+    width: 200px;
+    justify-content: space-between;
 }
 
-
+#headerCenter {
+    width: 64px;
+}
 
 #headerRight {
-    width: 170;
+    width: 180px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
+    background-color: var(--colorBackground);
     height: 88px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-#register-button {
+footer div {
+    height: max-content;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#footerLeft {
+    width: 250px;
+    justify-content: space-between;
+    align-self: center;
+}
+
+#footerLeft img {
+    margin: 10px
+}
+
+#footerRight {
+    width: 350px;
+    justify-items: space-between;
+    align-items: center;
+}
+
+/* NOTE: buttons */
+.buttonRegisterSmall {
+    width: 102px;
+    height: 40px;
     border-radius: 40px;
+    background-color: var(--colorBluePrimary);
+}
+
+.buttonRegisterSmall p {
+    color: white;
+    font-family: nunitoSemiBoldFont;
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: center;
+}
+
+.buttonTransparent {
+    height: max-content;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.languageButton {
+    background-color: var(--colorBlueSecondary);
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    border-width: 0;
+    padding: 8px 16px 8px 16px;
+}
+
+.boxWidth40 {
+    width: 40px;
 }
