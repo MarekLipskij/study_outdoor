@@ -1,10 +1,72 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box; 
+ }
+
+*:before{
+   box-sizing: border-box; 
+}
+
+*:after{
+    /* content: ""; */
+    box-sizing: border-box; 
+}
+
 :root {
     /* Colors */
     --colorBackground: #FBFCFE;
     --colorBluePrimary: #07167C;
     --colorBlueSecondary: #F3F4FA;
     --colorBlueBorder: #5666F2;
-    --colorBlueShadow: #0524C8;     /* TODO: add alpha 0.05 */
+    --colorBlueShadow: rgba(5, 36, 200, 0.05);
     --colorTextPrimary: #2E313E;
     --colorBlackAccent: #4B4B5A;
     --colorGrey04: #7D7D7E;
@@ -32,6 +94,63 @@
     font-family: nunitoSansRegFont;
     src: url(../fonts/NunitoSans-Regular.ttf);
     font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* Icon colors */
+
+.material-icons.primary-blue { 
+    color: var(--colorBluePrimary);
 }
 
 h1 {
@@ -71,7 +190,7 @@ h5 {
 
 a {
     text-decoration: none;
-    align-self: center;
+    /* align-self: center; */
 }
 
 a img {
@@ -81,19 +200,28 @@ a img {
 
 /* NOTE: page main components */
 body {
-    background-color: grey; /* TODO switch for -> var(--colorBackground); */
-    margin: 0px;
-    padding: 0px;
-    max-width: 1000px;
+    height: 100%;
+    background-color: var(--colorGrey04);
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
 }
 
 header {
     background-color: var(--colorBackground);
-    height: 72px;
-    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-width: 1024px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+header > img {
+    height: 48px;
+    width: auto;
 }
 
 header > div {
@@ -103,33 +231,61 @@ header > div {
     flex-direction: row;
 }
 
-#headerLeft {
+.header-left {
     width: 200px;
     justify-content: space-between;
+    
 }
 
-#headerCenter {
+.tab {
+    overflow: hidden;
+}
+
+.tab button {
+    font-family: nunitoSemiBoldFont;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--colorBluePrimary);
+    background-color: transparent;
+    border-width: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 0;
+    padding-right: 0;
+    /* margin-left: 8px;
+    margin-right: 8px; */
+}
+
+.tab button:active {
+    border-bottom: 1px solid var(--colorBluePrimary);
+}
+
+.header-center {
     width: 64px;
 }
 
-#headerRight {
+.header-right {
     width: 180px;
     justify-content: space-between;
     align-items: center;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
 }
 
 footer {
     background-color: var(--colorBackground);
-    height: 88px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     align-self: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-width: 1024px;
+    max-width: 1440px;
+    margin: auto;
 }
 
 footer div {
@@ -139,53 +295,143 @@ footer div {
     flex-direction: row;
 }
 
-#footerLeft {
-    width: 250px;
+.footer-left {
+    width: 230px;
     justify-content: space-between;
-    align-self: center;
+    align-items: center;
 }
 
-#footerLeft img {
-    margin: 10px
+.footer-left h5 {
+    display: inline-block;
 }
 
-#footerRight {
-    width: 350px;
-    justify-items: space-between;
+.footer-left > a {
+    margin: 0 8px 0 8px
+}
+
+.footer-left div a img {
+    width: auto;
+    height: 32px;
+}
+
+.footer-right {
+    width: 280px;
+    justify-content: space-between;
     align-items: center;
 }
 
 /* NOTE: buttons */
-.buttonRegisterSmall {
+
+.button-register-small {
     width: 102px;
     height: 40px;
+    line-height: 40px;
+    /* padding-top: 12px;
+    padding-bottom: 12px; */
     border-radius: 40px;
     background-color: var(--colorBluePrimary);
-}
-
-.buttonRegisterSmall p {
-    color: white;
-    font-family: nunitoSemiBoldFont;
-    font-size: 12px;
-    line-height: 1.33;
     text-align: center;
 }
 
-.buttonTransparent {
+.button-register-small p {
+    color: white;
+    font-family: nunitoSemiBoldFont;
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-block;
+}
+
+.button-transparent {
     height: max-content;
     padding-left: 5px;
     padding-right: 5px;
 }
 
-.languageButton {
+.language-button {
+    cursor: pointer;
     background-color: var(--colorBlueSecondary);
-    height: 40px;
-    width: 200px;
+    padding: 8px 16px 8px 16px;
     border-radius: 20px;
     border-width: 0;
     padding: 8px 16px 8px 16px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-family: nunitoSemiBoldFont;
+    color: var(--colorBluePrimary);
+    font-size: 14px;
+    line-height: 24px;
 }
 
-.boxWidth40 {
-    width: 40px;
+.language-button p {
+    padding-left: 8px;
+    padding-right: 8px;  
+    
 }
+
+.language-button img {
+    height: 15px;
+    width: auto;
+}
+
+.dropdown {
+    position: relative;
+    width: 190px;
+}
+
+.dropdown-content {
+    bottom: 0;
+    display: none;
+    position: absolute;
+    width: 190px;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0px -2px 20px var(--colorBlueShadow);
+    padding: 16px 0 16px 0;
+    z-index: 1;
+}
+
+.dropdown-content button {
+    cursor: pointer;
+    font-family: nunitoRegFont;
+    color: var(--colorBlackAccent);
+    background-color: transparent;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 8px 16px 8px 16px;
+    border-width: 0;
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid transparent;
+}
+
+.dropdown-content button p {
+    padding-left: 8px;
+    padding-right: 8px;  
+}
+
+.dropdown-content button img {
+    height: 15px;
+    width: auto;
+}
+
+.dropdown-content button:hover {
+    background-color: var(--colorBlueShadow);
+    color: var(--colorBluePrimary);
+    transition: all 500ms;
+}
+
+.dropdown-content button:active {
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 500ms;
+    border: 1px solid var(--colorBluePrimary);
+    border-radius: 2px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+

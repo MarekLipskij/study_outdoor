@@ -4,27 +4,23 @@
     <head>
         <title>Landing page</title>
         <link href="../css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         
        <header>
-            <div id="headerLeft">
-                <a href="http://google.com" class="buttonTransparent">
-                    <h4>Homepage</h4>
-                </a>
-                <a href="http://google.com" class="buttonTransparent">
-                    <h4>Find a job</h4>
-                </a>
+            <div class="header-left tab">
+                <button>Homepage</button>
+                <button>Find a job</button>
             </div>
-            <div id="headerCenter">
-                <img src="../assets/images/isia-logo.png" alt="header ISIA logo">
-            </div>
-            <div id="headerRight" class="headerRight">
-                <a href="" class="buttonTransparent">
+            <img src="../assets/images/isia-logo@2x.png" alt="header ISIA logo">
+            <div class="header-right">
+                <a href="" class="button-transparent">
                     <h4>Log in</h4>
                 </a>
-                <a href="http://google.com">
-                    <div class="buttonRegisterSmall">
+                <a href="http://">
+                    <div class="button-register-small">
                         <p>Register</p>
                     </div>
                 </a>
@@ -34,25 +30,42 @@
        <main></main>
 
        <footer>
-            <div class="footerLeft">
+            <div class="footer-left">
                 <h5>Find us here:</h5>
                 <div>
-                    <a href="">
-                        <img src="../assets/icons/social_networks/twitter.png" alt="follow twitter" width="32" height="32">
+                    <a href="http://">
+                        <img src="../assets/icons/social_networks/twitter@2x.png" alt="follow on twitter">
                     </a>
-                    <a href="">
-                        <img src="../assets/icons/social_networks/linkedin.png" alt="follow linkedin" width="32" height="32">
+                    <a href="http://">
+                        <img src="../assets/icons/social_networks/linkedin@2x.png" alt="follow on linkedin">
                     </a>
-                    <a href="">
-                        <img src="../assets/icons/social_networks/facebook.png" alt="follow facebook" width="32" height="32">
+                    <a href="http://">
+                        <img src="../assets/icons/social_networks/facebook@2x.png" alt="follow on facebook">
                     </a>
                 </div>
             </div>
-            <div class="footerRight">
+            <div class="footer-right">
                 <h5>Language</h5>
-                <button class="languageButton">
-
-                </button>
+                <label for=""></label>
+                <div class="dropdown">
+                    <button class="language-button">
+                        <img src="../assets/images/components/flag_eng@2x.png" alt="flag uk">
+                        <p>English (British)</p>
+                        <span class="material-icons md-18 primary-blue">arrow_drop_down</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <button>
+                            <img src="../assets/images/components/flag_eng@2x.png" alt="flag uk">
+                            <p>English (British)</p>
+                            <!-- <span class="material-icons md-18 primary-blue">arrow_drop_down</span> -->
+                        </button>
+                        <button>
+                            <img src="../assets/images/components/flag_cze@2x.png" alt="flag uk">
+                            <p>Czech</p>
+                            <!-- <span class="material-icons md-18 primary-blue">arrow_drop_down</span> -->
+                        </button>
+                    </div>
+                </div>
             </div>
        </footer>
 
