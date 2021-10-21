@@ -327,7 +327,6 @@ main {
     justify-content: center;
     padding-top: 24px;
     padding-bottom: 32px;
-
 }
 
 .tab-content-instructor {
@@ -338,7 +337,10 @@ main {
 }
 
 .tab-content-employer {
-
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 64px;
 }
 
 .content-tab button {
@@ -362,6 +364,24 @@ main {
 }
 .content-tab button:hover {
     border-bottom: 1px solid var(--colorBluePrimary);
+}
+
+.customer-responses {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 64px;
+}
+
+.customer-responses h2 {
+    text-align: center;
+    padding-top: 64px;
+    padding-bottom: 40px;
+}
+
+.customer-responses div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 footer {
@@ -554,26 +574,72 @@ footer div {
 /* NOTE: boxes */
 
 .tabbar-content-card {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
     width: 360px;
     height: 308px;
     border-radius: 4px;
     padding: 40px;
     background-color: white;
     box-shadow: 0px -2px 20px rgba(5, 36, 200, 0.04), 0px 4px 20px rgba(5, 36, 200, 0.05);
+}
+
+    .tabbar-content-card img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .tabbar-content-card p {
+        font-family: nunitoSansRegFont;
+        font-size: 15px;
+        line-height: 20px;
+        color: var(--colorBlackAccent);
+    }
+
+.customer-response-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 356px;
+    width: 530px;
+    border-radius: 16px;
+    border: 0.5px solid var(--colorBlueBorder);
+    padding: 56px 40px 56px 40px;
 }
 
-.tabbar-content-card img {
-    height: 40px;
-    width: 40px;
+.user-info {
+
 }
 
-.tabbar-content-card p {
-    font-family: nunitoSansRegFont;
-    font-size: 15px;
-    line-height: 20px;
-    color: var(--colorBlackAccent);
+    .user-info img {
+        width: 104px;
+        height: 104px;
+    }
+
+    .customer-response-card img {
+        width: 32px;
+        height: 32px;
+        padding-top: 24px;
+        padding-bottom: 16px;
+    }
+
+    .customer-response-card p {
+        font-family: nunitoSansRegFont;
+        font-size: 20px;
+        line-height: 32px;
+        color: var(--colorBlackAccent);
+    }
+
+.user-info-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info-detail li {
+    /* background-image: url('../assets/images/components/flag_cze@2x.png');
+    background-position: left center;
+    background-repeat: no-repeat; */
 }
 
