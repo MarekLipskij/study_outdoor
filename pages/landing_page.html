@@ -4,34 +4,46 @@
     <head>
         <title>Landing page</title>
         <link href="../css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../css/media_query.css" type="text/css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <!-- HEADER -->
-        <header class="content-width">
-                <div class="header-left tab">
-                    <button>Homepage</button>
-                    <button>Find a job</button>
-                </div>
-                <img src="../assets/images/isia-logo@2x.png" alt="header ISIA logo">
-                <div class="header-right">
-                    <a href="" class="button-transparent">
-                        <h4>Log in</h4>
-                    </a>
-                    <a href="http://">
-                        <div class="button-register-small">
-                            <p>Register</p>
-                        </div>
-                    </a>
-                </div>
+        <header class="row">
+            <div class="header-left tab">
+                <button>Homepage</button>
+                <button>Find a job</button>
+            </div>
+            <img src="../assets/images/isia-logo@2x.png" alt="header ISIA logo">
+            <div class="header-right">
+                <a href="#" class="button-transparent">
+                    <h4>Log in</h4>
+                </a>
+                <a href="#">
+                    <div class="button-register-small">
+                        <p>Register</p>
+                    </div>
+                </a>
+            </div>
         </header>
         <!-- MAIN CONTENT -->
-        <main class="content-width">
-            <div>
-                <!-- TODO: place for the top image -->
+        <main>
+            <div class="top-image">
+                <!-- place for the top register card -->
+                <div class="row">
+                    <div class="get-hired-card-top">
+                        <h1>Get hired by the best ski schools around the world.</h1>
+                        <h5>The first snowsport platform tailored for ISIA qualified instructors.</h5>  
+                        <a href="#">
+                            <div class="button-register-large button-blue">
+                                <p>Register</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="verified-content">
+            <div class="verified-content row">
                 <p>Worldwide reach</p>
                 <p>Verified users</p>
                 <p>Genuine offers</p>
@@ -40,120 +52,163 @@
                 <h1>How does ISIA job platform work?</h1>
             </div>
             <!-- TabBar with Instructor / Employer content -->
-            <div class="content-tab">
+            <div class="content-tab row">
                 <button>Instructor</button>
                 <button>Employer</button>
             </div>
             <!-- TabBar instructor content -->
-            <div class="tab-content-instructor">
-                <div class="tabbar-content-card">
-                    <img src="../assets/icons/content/img_global@2x.png" alt="ico global">
-                    <h2>Connect with the community</h2>
-                    <p>
-                        Search for job vacancies all around the world.<br>
-                        Apply to jobs and let ski schools look through your profile and get in touch.
-                    </p>
-                </div>
-                <div class="tabbar-content-card">
-                    <img src="../assets/icons/content/img_spread@2x.png" alt="ico global">
-                    <h2>
-                        Find opportunities <br>
-                        2nd line
-                    </h2>
-                    <p>
-                        Search for job vacancies all around the world.<br>
-                        Apply to jobs and let ski schools look through your profile and get in touch.
-                    </p>
-                </div>
-                <div class="tabbar-content-card">
-                    <img src="../assets/icons/content/img_peak@2x.png" alt="ico global">
-                    <h2>
-                        Get job offers<br>
-                        2nd line
-                    </h2>
-                    <p>
-                        Search for job vacancies all around the world.<br>
-                        Apply to jobs and let ski schools look through your profile and get in touch.
-                    </p>
+            <div class="row">
+                <div class="tab-content-instructor">
+                    <div class="tab-content-box">
+                        <div class="tabbar-content-card">
+                            <img src="../assets/icons/content/img_global@2x.png" alt="ico global">
+                            <h2>Connect with the community</h2>
+                            <p>
+                                Search for job vacancies all around the world.<br>
+                                Apply to jobs and let ski schools look through your profile and get in touch.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-content-box">
+                        <div class="tabbar-content-card">
+                            <img src="../assets/icons/content/img_spread@2x.png" alt="ico global">
+                            <h2>
+                                Find opportunities <br>
+                                2nd line
+                            </h2>
+                            <p>
+                                Search for job vacancies all around the world.<br>
+                                Apply to jobs and let ski schools look through your profile and get in touch.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-content-box">
+                        <div class="tabbar-content-card">
+                            <img src="../assets/icons/content/img_peak@2x.png" alt="ico global">
+                            <h2>
+                                Get job offers<br>
+                                2nd line
+                            </h2>
+                            <p>
+                                Search for job vacancies all around the world.<br>
+                                Apply to jobs and let ski schools look through your profile and get in touch.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- TabBar employer content -->
-            <div class="tab-content-employer">
-                <div class="tabbar-content-card">
-                    <img src="../assets/icons/content/img_global@2x.png" alt="ico global">
-                    <h2>Different content for instructor/employer</h2>
-                    <p>
-                        Search for job vacancies all around the world.<br>
-                        Apply to jobs and let ski schools look through your profile and get in touch.
-                    </p>
-                </div>
-                <div class="tabbar-content-card">
-                    <img src="../assets/icons/content/img_spread@2x.png" alt="ico global">
-                    <h2>
-                        Different content for instructor/employer
-                    </h2>
-                    <p>
-                        Search for job vacancies all around the world.<br>
-                        Apply to jobs and let ski schools look through your profile and get in touch.
-                    </p>
-                </div>
-                <div class="tabbar-content-card">
-                    <img src="../assets/icons/content/img_correct@2x.png" alt="ico global">
-                    <h2>
-                        Different content for instructor/employer
-                    </h2>
-                    <p>
-                        Search for job vacancies all around the world.<br>
-                        Apply to jobs and let ski schools look through your profile and get in touch.
-                    </p>
-                </div>
-            </div>
-            <div class="blue-divider">
-                <h4 class="text-white">Are you interested?</h4>
-                <a href="http://">
-                    <div class="button-white button-register-large">
-                        <p>Register</p>
-                    </div>
-                </a>
-            </div>
-            <div class="customer-responses">
-                <!-- TODO: place for customer responses -->
-                <h2>What our customers say?</h2>
-                <div>
-                    <div class="customer-response-card">
-                        <div class="user-info">
-                            <img src="../assets/images/temp/img_temp_user@2x.png" alt="img avatar">
-                            <div class="user-info-detail">
-                                <h2>Joe Doe</h2>
-                                <li>Czech Republic</li>
-                                <p>Instructor</p>
-                            </div>
+            <div class="row">
+                <div class="tab-content-employer">
+                    <div class="tab-content-box">
+                        <div class="tabbar-content-card">
+                            <img src="../assets/icons/content/img_global@2x.png" alt="ico global">
+                            <h2>Different content for instructor/employer</h2>
+                            <p>
+                                Search for job vacancies all around the world.<br>
+                                Apply to jobs and let ski schools look through your profile and get in touch.
+                            </p>
                         </div>
-                        <img src="../assets/icons/content/img_quote@2x.png" alt="img quote">
-                        <p>"The platform has been great for us and we have enjoyed communicating with the instructors!!"</p>
                     </div>
-                    <div class="customer-response-card">
-                        <img src="../assets/icons/content/img_quote@2x.png" alt="img quote">
-                        <p>"The platform has been great for us and we have enjoyed communicating with the instructors!!"</p>
+                    <div class="tab-content-box">
+                        <div class="tabbar-content-card">
+                            <img src="../assets/icons/content/img_spread@2x.png" alt="ico global">
+                            <h2>
+                                Different content for instructor/employer
+                            </h2>
+                            <p>
+                                Search for job vacancies all around the world.<br>
+                                Apply to jobs and let ski schools look through your profile and get in touch.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-content-box">
+                        <div class="tabbar-content-card">
+                            <img src="../assets/icons/content/img_correct@2x.png" alt="ico global">
+                            <h2>
+                                Different content for instructor/employer
+                            </h2>
+                            <p>
+                                Search for job vacancies all around the world.<br>
+                                Apply to jobs and let ski schools look through your profile and get in touch.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <!-- TODO: place for the bottom image -->
+            <!-- Blue divider -->
+            <div class="divider">
+                <div class="blue-divider row">
+                    <h2 class="text-white">Are you interested?</h2>
+                    <a href="#">
+                        <div class="button-white button-register-large">
+                            <p>Register</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <!-- place for customer responses -->
+                <div class="customer-responses-headline">
+                    <h2>What our customers say?</h2>
+                </div>
+                <div class="customer-responses">
+                    <div class="customer-responses-box">
+                        <div class="customer-response-card">
+                            <div class="user-info">
+                                <img src="../assets/images/temp/img_temp_user@2x.png" alt="img avatar">
+                                <div class="user-info-detail">
+                                    <h2>John Doe</h2>
+                                    <h6>Czech Republic</h6>
+                                    <p>Instructor</p>
+                                </div>
+                            </div>
+                            <img src="../assets/icons/content/img_quote@2x.png" alt="img quote">
+                            <p>"The platform has been great for us and we have enjoyed communicating with the instructors!!"</p>
+                        </div>
+                    </div>
+                    <div class="customer-responses-box">
+                        <div class="customer-response-card">
+                            <div class="user-info">
+                                <img src="../assets/images/temp/img_temp_user@2x.png" alt="img avatar">
+                                <div class="user-info-detail">
+                                    <h2>John Doe</h2>
+                                    <h6>Czech Republic</h6>
+                                    <p>Instructor</p>
+                                </div>
+                            </div>
+                            <img src="../assets/icons/content/img_quote@2x.png" alt="img quote">
+                            <p>"The platform has been great for us and we have enjoyed communicating with the instructors!!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-image">
+                <!-- place for the bottom registration card -->
+                <div class="row from-right">
+                    <div class="get-hired-card-bottom">
+                        <h2>Get hired by the best ski schools around the world.</h2>
+                        <a href="#">
+                            <div class="button-register-large button-blue">
+                                <p>Register</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </main>
         <!-- FOOTER -->
-        <footer class="content-width">
+        <footer class="row">
                 <div class="footer-left">
                     <h5>Find us here:</h5>
                     <div>
-                        <a href="http://">
+                        <a href="#">
                             <img src="../assets/icons/social_networks/twitter@2x.png" alt="follow on twitter">
                         </a>
-                        <a href="http://">
+                        <a href="#">
                             <img src="../assets/icons/social_networks/linkedin@2x.png" alt="follow on linkedin">
                         </a>
-                        <a href="http://">
+                        <a href="#">
                             <img src="../assets/icons/social_networks/facebook@2x.png" alt="follow on facebook">
                         </a>
                     </div>
